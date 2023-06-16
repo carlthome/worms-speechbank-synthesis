@@ -1,0 +1,4 @@
+pandas==2.0.2
+ipykernel==6.23.2
+google-cloud-aiplatform==1.26.0
+black[jupyter]==23.3.0
