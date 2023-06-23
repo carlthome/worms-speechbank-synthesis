@@ -13,7 +13,7 @@ python -m venv .venv
 .venv/bin/pip install -r requirements.txt
 ```
 
-# References
+## References
 
 - GIF borrowed from YouTube ([source](https://www.youtube.com/watch?v=xVzXJOxVyEU))
 - Dataset found at [Worms Fandom](https://worms.fandom.com/wiki/Speech)
