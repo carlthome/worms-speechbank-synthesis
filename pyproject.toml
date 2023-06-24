@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "worms-speechbank-synthesis"
-version = "0.1.0"
+dynamic = ["version"]
 authors = [{ name = "Carl Thomé", email = "carlthome@gmail.com" }]
 description = "Use large language models (LLMs) and text-to-speech (TTS) to generate new speech lines for the classic PC game Worms"
 readme = "README.md"
@@ -30,8 +30,10 @@ tests = ["pytest", "pytest-cov"]
 worms-speechbank-synthesis = 'worms_speechbank_synthesis.__main__:main'
 
 [project.urls]
-"Homepage" = "https://github.com/carlthome/worms-speechbank-synthesis"
-"Bug Tracker" = "https://github.com/carlthome/worms-speechbank-synthesis/issues"
+
+[tool.setuptools_scm]
+write_to = "worms_speechbank_synthesis/version.py"
+
 
 [tool.setuptools]
 packages = ["worms_speechbank_synthesis"]
