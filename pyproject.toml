@@ -8,6 +8,7 @@ dynamic = ["version"]
 authors = [{ name = "Carl Thomé", email = "carlthome@gmail.com" }]
 description = "Use large language models (LLMs) and text-to-speech (TTS) to generate new speech lines for the classic PC game Worms"
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.8"
 dependencies = [
   "openai>=0.27.8",
