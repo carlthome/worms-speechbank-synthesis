@@ -18,11 +18,6 @@ dependencies = [
   "librosa>=0.10.0.post2",
   "pandas>=2.0.2",
 ]
-classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
-]
 
 [project.optional-dependencies]
 tests = ["pytest", "pytest-cov"]
@@ -31,10 +26,19 @@ tests = ["pytest", "pytest-cov"]
 worms-speechbank-synthesis = 'worms_speechbank_synthesis.__main__:main'
 
 [project.urls]
+Homepage = "https://github.com/carlthome/worms-speechbank-synthesis"
 
 [tool.setuptools_scm]
 write_to = "worms_speechbank_synthesis/version.py"
 
+[tool.autoflake]
+remove_all_unused_imports = true
 
-[tool.setuptools]
-packages = ["worms_speechbank_synthesis"]
+[tool.isort]
+profile = "black"
+
+[tool.docformatter]
+black = true
+
+[tool.mypy]
+strict = true
