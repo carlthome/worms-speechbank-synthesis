@@ -30,6 +30,7 @@ Homepage = "https://github.com/carlthome/worms-speechbank-synthesis"
 
 [tool.setuptools_scm]
 write_to = "worms_speechbank_synthesis/version.py"
+local_scheme = "no-local-version"
 
 [tool.autoflake]
 remove_all_unused_imports = true
