@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  package-name: "audioscrape"
+  package-name: "worms-speechbank-synthesis"
 
 jobs:
   build:
