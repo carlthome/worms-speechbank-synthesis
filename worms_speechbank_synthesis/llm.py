@@ -1,7 +1,9 @@
-from vertexai.language_models import TextGenerationModel
+from vertexai.language_models import TextGenerationModel, TextGenerationResponse
 
 
-def create_text(personality: dict[str, str], examples: str, speech_key: str) -> str:
+def create_text(
+    personality: dict[str, str], examples: str, speech_key: str
+) -> TextGenerationResponse:
     model = TextGenerationModel.from_pretrained("text-bison")
 
     task_description = """

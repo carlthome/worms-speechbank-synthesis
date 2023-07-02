@@ -8,6 +8,14 @@ from .llm import create_text
 from .tts import create_audio
 
 
+def export_soundbank():
+    path = Path(
+        "~/.steam/steam/steamapps/common/Worms Armageddon/User/Speech"
+    ).expanduser()
+    path.mkdir(parents=True, exist_ok=True)
+    # TODO Export soundbank.
+
+
 def main():
     vertexai.init()
 

@@ -4,7 +4,7 @@ import librosa as lr
 from google.cloud import texttospeech
 
 
-def create_audio(text: str):
+def create_audio(text: str) -> texttospeech.SynthesizeSpeechResponse:
     client = texttospeech.TextToSpeechClient()
     input_text = texttospeech.SynthesisInput(text=text)
     voice = texttospeech.VoiceSelectionParams(
