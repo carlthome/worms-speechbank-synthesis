@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worms-speechbank-synthesis"
+dynamic = ["version"]
+authors = [{ name = "Carl Thomé", email = "carlthome@gmail.com" }]
+description = "Use large language models (LLMs) and text-to-speech (TTS) to generate new speech lines for the classic PC game Worms"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+  "openai>=0.27.8",
+  "transformers[torch]>=4.9.2",
+  "google-cloud-aiplatform>=1.26.0",
+  "google-cloud-texttospeech>=2.14.1",
+  "librosa>=0.10.0.post2",
+  "pandas>=2.0.2",
+]
+
+[project.optional-dependencies]
+tests = ["pytest", "pytest-cov"]
+
+[project.scripts]
+worms-speechbank-synthesis = 'worms_speechbank_synthesis.__main__:main'
+
+[project.urls]
+Homepage = "https://github.com/carlthome/worms-speechbank-synthesis"
+
+[tool.setuptools_scm]
+write_to = "worms_speechbank_synthesis/version.py"
+local_scheme = "no-local-version"
+
+[tool.autoflake]
+remove_all_unused_imports = true
+
+[tool.isort]
+profile = "black"
+
+[tool.docformatter]
+black = true
+
+[tool.mypy]
+strict = true
+allow_untyped_defs = true
+allow_untyped_calls = true
